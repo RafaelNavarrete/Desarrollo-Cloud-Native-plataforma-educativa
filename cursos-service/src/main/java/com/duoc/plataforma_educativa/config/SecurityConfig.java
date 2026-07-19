@@ -16,11 +16,9 @@ import org.springframework.http.HttpMethod;
 
 /**
  * Configuracion de seguridad de cursos-service. Valida tokens JWT emitidos
- * por Azure AD y protege los endpoints segun el custom claim "extension_rol":
+ * por Azure AD y protege los endpoints segun el custom claim "extension_guiaRole":
  *   - rol_estudiante -> puede listar cursos y crear inscripciones
  *   - rol_instructor -> ademas puede crear cursos y estudiantes
- *
- * Mismo patron que SecurityConfig.java del BFF y del proyecto gestion-pedidos.
  *
  * @author Rafael Navarrete
  */

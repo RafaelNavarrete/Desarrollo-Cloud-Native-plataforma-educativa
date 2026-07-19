@@ -15,11 +15,9 @@ import org.springframework.security.web.SecurityFilterChain;
 
 /**
  * Configuracion de seguridad del BFF. Valida tokens JWT emitidos por Azure AD
- * y protege los endpoints segun el custom claim "extension_rol":
- *   - rol_estudiante -> solo puede crear y descargar su propio resumen
- *   - rol_instructor -> puede usar todos los endpoints (modificar/eliminar incluidos)
- *
- * Mismo patron que SecurityConfig.java del proyecto gestion-pedidos (Exp2).
+ * y protege los endpoints segun el custom claim "extension_guiaRole":
+ *   - rol_estudiante -> puede usar todos los endpoints relacionados con resumenes
+ *   - rol_instructor -> puede usar todos los endpoints 
  *
  * @author Rafael Navarrete
  */
